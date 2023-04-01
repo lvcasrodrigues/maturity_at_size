@@ -1,4 +1,4 @@
-## Maturity at size ##
+## Size at maturity ##
 ## by Lucas Rodrigues 31/03/23 ##
 
 # libraries
@@ -19,7 +19,7 @@ Anova(mod)
 yhat.df <- emmeans(mod, ~ class, at=list(class=seq(min(data$class),max(data$class),by=ifelse(max(data$class)>1000,1,.1))), type='response') %>%
   as.data.frame()
 
-# choose the maturity probability! ex. .5, .9, etc
+# choose the cutoff! ex. .5, .9, etc
 prob_mat <- .5
 
 # size at maturity
