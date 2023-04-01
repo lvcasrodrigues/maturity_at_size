@@ -16,7 +16,7 @@ mod <- glm(cbind(mature, total-mature) ~ class, data = data, family = binomial(l
 Anova(mod)
 
 # generating data from model
-yhat.df <- emmeans(mod, ~ class, at=list(class=seq(0,max(data$class),by=ifelse(max(data$class)>1000,1,.1))), type='response') %>%
+yhat.df <- emmeans(mod, ~ class, at=list(class=seq(min(data$class),max(data$class),by=ifelse(max(data$class)>1000,1,.1))), type='response') %>%
   as.data.frame()
 
 # choose the maturity probability! ex. .5, .9, etc
