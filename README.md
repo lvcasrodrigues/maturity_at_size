@@ -1,4 +1,4 @@
-# maturity_at_size
+# Maturity at size
 Here I provide a short code to estimate the size-at-maturity.
 
 Through a generalized linear model under Binomial distribution Bin(n, p) we can estimate the size in which 50% (or other) of population are madure. Such information is pivotal for fishery sciences.
