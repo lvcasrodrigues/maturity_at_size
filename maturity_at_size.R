@@ -43,7 +43,7 @@ ggplot() +
   coord_cartesian(xlim = c(min(data$class),max(data$class)), ylim = c(0,1))+
    theme(panel.background = element_blank(),
         axis.line = element_line(colour = "black"),
-        panel.grid.major = element_line(color = "grey90", size = 0.1, linetype = 2), legend.position = 'none')
+        panel.grid.major = element_line(color = "grey90", linewidth = 0.1, linetype = 2), legend.position = 'none')
 
 # saving plot
 ggsave("image.jpeg", width = 120, height = 100, units = c("mm"), dpi = 600)
