@@ -19,7 +19,7 @@ data <- read_excel("example_maturity_at_size.xlsx", sheet = "Plan1")
 mod <- glm(cbind(mature, total-mature) ~ class, data = data, family = binomial(link="logit"))
 Anova(mod)
 
-# parameters extracted of frequestist GLM
+# parameters extracted from frequestist GLM
 alfa <- as.numeric(coef(mod))
 
 # ploting curve
