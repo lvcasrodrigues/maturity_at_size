@@ -25,17 +25,17 @@ prob_mat <- .5
 # size at maturity
 cut <- filter(yhat.df, prob >= prob_mat)
 
-SzAtMat <- round(min(cut$class),3)
+SzAtMat <- round(min(cut$class),1)
 SzAtMat
 
 # plot
 ggplot() +
-  geom_point(data = data, aes(x = class, y = mature/total), colour = "black", shape = 16, size=3)+
   geom_line(data = yhat.df, aes(y = prob, x = class), col="black", lty=1, lwd=1) +
   geom_line(data = yhat.df, aes(y = asymp.LCL, x = class), col="grey", lty=2, lwd=.8) +
   geom_line(data = yhat.df, aes(y = asymp.UCL, x = class), col="grey", lty=2, lwd=.8) +
   geom_segment(aes(x = -15, xend = SzAtMat, y = prob_mat, yend = prob_mat), color ="red", size =.8, linetype = "dashed")+
   geom_segment(aes(x = SzAtMat, xend = SzAtMat, y = -.5, yend = prob_mat), color ="red", size =.8, linetype = "dashed")+
+  geom_point(data = data, aes(x = class, y = mature/total), colour = "black", shape = 16, size=3)+
   annotate(geom = "text",x = quantile(seq(min(data$class),max(data$class)),.1), y = .95, label = bquote(L[50] == .(SzAtMat) ~ "mm"), color = "black") +
   ylab("Maturity") +
   xlab("Size class (mm)") +
@@ -46,4 +46,4 @@ ggplot() +
         panel.grid.major = element_line(color = "grey90", linewidth = 0.1, linetype = 2), legend.position = 'none')
 
 # saving plot
-ggsave("image.jpeg", width = 120, height = 100, units = c("mm"), dpi = 600)
+ggsave("image1.jpeg", width = 120, height = 100, units = c("mm"), dpi = 600)
