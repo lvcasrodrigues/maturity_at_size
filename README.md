@@ -9,3 +9,5 @@ The model needs 3 informations:
 3) number of total sampled individuals by size class.
 
 The code also brings a plot (ggplot) and a way to save it in high quality.
+
+Update: I also provided an additional code in order to estimate the size-at-maturity in the Bayesian framework.
