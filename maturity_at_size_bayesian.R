@@ -2,6 +2,7 @@
 ## by Lucas Rodrigues 10/11/23 ##
 
 # libraries
+library(readxl)
 library(jagsUI)
 library(car)
 library(ggplot2)
