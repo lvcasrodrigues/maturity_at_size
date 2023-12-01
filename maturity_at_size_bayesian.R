@@ -10,10 +10,10 @@ library(ggplot2)
 # insert data
 data <- read_excel("example_maturity_at_size.xlsx", sheet = "Plan1")
 
-#mature <- c(0,0,2,2,7,31,39,32,32,26,28,16,20,23,12,10,2,1)
-#total <- c(1,3,6,6,16,39,41,35,33,27,28,16,20,23,12,10,2,1)
-#class <- seq(170,340,10)
-#data <- data.frame(cbind(class, mature, total))
+mature <- c(0,0,2,2,7,31,39,32,32,26,28,16,20,23,12,10,2,1)
+total <- c(1,3,6,6,16,39,41,35,33,27,28,16,20,23,12,10,2,1)
+class <- seq(170,340,10)
+data <- data.frame(cbind(class, mature, total))
 
 # frequentist Binomial model
 mod <- glm(cbind(mature, total-mature) ~ class, data = data, family = binomial(link="logit"))
@@ -91,7 +91,7 @@ plot1 <- ggplot() +
 plot1
 
 ggplot() +
-  geom_segment(aes(x = mean(SzAtMat), xend = .85*max(data$class), y = prob_mat, yend = prob_mat), color ="red", size =.3, linetype = "dashed")+
+  geom_segment(aes(x = mean(SzAtMat), xend = .85*max(data$class), y = prob_mat, yend = .5), color ="red", size =.3, linetype = "dashed")+
   geom_segment(aes(x = mean(SzAtMat), xend = .85*max(data$class), y = prob_mat, yend = 0), color ="red", size =.3, linetype = "dashed")+
   annotation_custom(ggplotGrob(plot1), xmin = .85*max(data$class), xmax = max(data$class), 
                     ymin = 0, ymax = .5) +
