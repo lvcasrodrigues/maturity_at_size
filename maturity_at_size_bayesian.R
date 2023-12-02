@@ -1,5 +1,5 @@
 ## Size at maturity - Bayesian inference ##
-## by Lucas Rodrigues 10/11/23 ##
+## by Lucas Rodrigues & Paul Kinas 10/11/23 ##
 
 # libraries
 library(readxl)
