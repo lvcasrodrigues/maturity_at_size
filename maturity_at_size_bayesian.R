@@ -18,6 +18,7 @@ data <- data.frame(cbind(class, mature, total))
 # frequentist Binomial model
 mod <- glm(cbind(mature, total-mature) ~ class, data = data, family = binomial(link="logit"))
 Anova(mod)
+summary(mod)
 
 # parameters extracted from frequestist GLM
 alfa <- as.numeric(coef(mod))
@@ -113,4 +114,4 @@ ggplot() +
         panel.grid.major = element_line(color = "grey90", linewidth = 0.1, linetype = 2), legend.position = 'none')
 
 # saving plot
-ggsave("image2.jpeg", width = 130, height = 100, units = c("mm"), dpi = 600)
+ggsave("image.jpeg", width = 130, height = 100, units = c("mm"), dpi = 600)
