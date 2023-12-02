@@ -8,7 +8,7 @@ library(car)
 library(ggplot2)
 
 # insert data
-data <- read_excel("example_maturity_at_size.xlsx", sheet = "Plan1")
+#data <- read_excel("example_maturity_at_size.xlsx", sheet = "Plan1")
 
 mature <- c(0,0,2,2,7,31,39,32,32,26,28,16,20,23,12,10,2,1)
 total <- c(1,3,6,6,16,39,41,35,33,27,28,16,20,23,12,10,2,1)
