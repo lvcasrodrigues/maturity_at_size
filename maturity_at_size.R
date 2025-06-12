@@ -46,4 +46,4 @@ ggplot() +
         panel.grid.major = element_line(color = "grey90", linewidth = 0.1, linetype = 2), legend.position = 'none')
 
 # saving plot
-ggsave("image1.jpeg", width = 120, height = 100, units = c("mm"), dpi = 600)
+#ggsave("image1.jpeg", width = 120, height = 100, units = c("mm"), dpi = 600)

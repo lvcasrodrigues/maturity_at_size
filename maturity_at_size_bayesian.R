@@ -87,7 +87,7 @@ plot1 <- ggplot() +
         axis.title = element_text(size=8),
         axis.text = element_text(size=5),
         axis.line = element_line(colour = "black"),
-        plot.background = element_rect(color = "red", linewidth = 1.5),
+        plot.background = element_rect(color = "red", linewidth = .8),
         panel.grid.major = element_line(color = "grey90", linewidth = 0.1, linetype = 2), legend.position = 'none')
 plot1
 
